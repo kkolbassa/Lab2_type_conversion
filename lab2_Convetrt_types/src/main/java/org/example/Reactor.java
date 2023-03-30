@@ -12,6 +12,19 @@ public class Reactor {
     private int first_load;
     private String source;
 
+    public Reactor(String name, String classReactor, int burnup, double kpd, double enrichment, int thermal_capacity, int electrical_capacity, int life_time, int first_load, String source) {
+        this.name = name;
+        this.classReactor = classReactor;
+        this.burnup = burnup;
+        this.kpd = kpd;
+        this.enrichment = enrichment;
+        this.thermal_capacity = thermal_capacity;
+        this.electrical_capacity = electrical_capacity;
+        this.life_time = life_time;
+        this.first_load = first_load;
+        this.source = source;
+    }
+
     public String getName() {
         return name;
     }

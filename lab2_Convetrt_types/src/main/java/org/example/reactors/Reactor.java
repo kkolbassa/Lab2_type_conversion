@@ -1,12 +1,10 @@
-package org.example;
+package org.example.reactors;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Reactor {
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String name;
-    @JsonProperty("class")
     private String classReactor;
     private double burnup;
     private double kpd;

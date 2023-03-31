@@ -1,8 +1,9 @@
-package org.example;
+package org.example.reactorParser;
 import java.io.File;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 
+import org.example.reactors.Reactor;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
@@ -10,7 +11,7 @@ import org.w3c.dom.Element;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ReactorParserXml implements ReactorParser{
+public class ReactorParserXml implements ReactorParser {
     @Override
     public ArrayList<Reactor> parse(String filePath) throws IOException {
         ArrayList<Reactor> result = new ArrayList<>();

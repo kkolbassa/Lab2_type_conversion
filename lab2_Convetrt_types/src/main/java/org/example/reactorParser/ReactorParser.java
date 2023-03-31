@@ -1,4 +1,6 @@
-package org.example;
+package org.example.reactorParser;
+
+import org.example.reactors.Reactor;
 
 import java.io.IOException;
 import java.util.ArrayList;

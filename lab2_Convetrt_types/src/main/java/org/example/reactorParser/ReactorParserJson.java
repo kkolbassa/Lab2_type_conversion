@@ -1,7 +1,8 @@
-package org.example;
+package org.example.reactorParser;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.JsonNode;
+import org.example.reactors.Reactor;
 
 import java.io.File;
 import java.io.IOException;

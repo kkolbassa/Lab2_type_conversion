@@ -1,5 +1,6 @@
-package org.example;
+package org.example.reactorParser;
 
+import org.example.reactors.Reactor;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.FileInputStream;

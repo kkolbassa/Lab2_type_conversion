@@ -4,15 +4,13 @@ import org.example.reactorParser.ReactorParser;
 import org.example.reactorParser.ReactorParserJson;
 import org.example.reactorParser.ReactorParserXml;
 import org.example.reactorParser.ReactorParserYaml;
-import org.example.reactors.Reactor;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class DataManipulation {
-    public static ReactorCollection reactors;
+    public static ReactorCollection reactors = new ReactorCollection();
 
     public void createFiles() throws IOException {
         if (new File("./data/Reactors_json.json").exists()) {

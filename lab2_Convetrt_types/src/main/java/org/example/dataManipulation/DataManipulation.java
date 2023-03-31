@@ -49,9 +49,6 @@ public class DataManipulation {
                 reactorParser = new ReactorParserJson();
                 break;
             }
-            default:
-                System.out.println("Файл с неподходящим расширением");
-                break;
         }
         reactors.setReactors(reactorParser.parse(filePath));
     }

@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class ConvertJson2types {
+
     public void convert2xml() throws IOException {
         // Создание объекта ObjectMapper для чтения JSON
         ObjectMapper jsonMapper = new ObjectMapper();
@@ -31,6 +32,7 @@ public class ConvertJson2types {
         xmlNode.set("reactor", rootNode);
         xmlMapper.writeValue(new File("./data/Reactors_xml.xml"), xmlNode);
     }
+
     public void convert2yaml() throws IOException {
         // Создание объекта ObjectMapper для чтения JSON
         ObjectMapper jsonMapper = new ObjectMapper();

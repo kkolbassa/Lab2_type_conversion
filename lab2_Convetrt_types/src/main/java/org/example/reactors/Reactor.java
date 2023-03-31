@@ -3,6 +3,9 @@ package org.example.reactors;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.MutableTreeNode;
+
 public class Reactor {
     private String name;
     private String classReactor;
@@ -109,5 +112,18 @@ public class Reactor {
 
     public void setSource(String source) {
         this.source = source;
+    }
+
+    public MutableTreeNode getNode() {
+        DefaultMutableTreeNode reactorNode = new DefaultMutableTreeNode(getName());
+        reactorNode.add(new DefaultMutableTreeNode("Класс: "+getClassReactor()));
+        reactorNode.add(new DefaultMutableTreeNode("КПД: "+getKpd()));
+        reactorNode.add(new DefaultMutableTreeNode("Обогащение: "+getEnrichment()));
+        reactorNode.add(new DefaultMutableTreeNode("Тепловая мощность: "+getThermal_capacity()));
+        reactorNode.add(new DefaultMutableTreeNode("Энергетическая мощность: "+getElectrical_capacity()));
+        reactorNode.add(new DefaultMutableTreeNode("Время жизни: "+getLife_time()));
+        reactorNode.add(new DefaultMutableTreeNode("Начальная загрузка: "+getFirst_load()));
+        reactorNode.add(new DefaultMutableTreeNode("Источник с расширением: "+getSource()));
+        return reactorNode;
     }
 }

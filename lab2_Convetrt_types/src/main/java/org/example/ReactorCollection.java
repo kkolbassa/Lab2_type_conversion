@@ -6,9 +6,10 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.ArrayList;
 
 public class ReactorCollection {
-    private ArrayList<Reactor> reactors = null;
+    private ArrayList<Reactor> reactors ;
 
     public ReactorCollection() {
+        reactors = new ArrayList<>();
     }
 
     public ArrayList<Reactor> getReactors() {

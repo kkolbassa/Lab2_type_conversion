@@ -1,4 +1,4 @@
-package org.example;
+package org.example.convertFiles;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,5 +1,6 @@
-package org.example;
+package org.example.dataManipulation;
 
+import org.example.convertFiles.ConvertJson2types;
 import org.example.reactorParser.ReactorParser;
 import org.example.reactorParser.ReactorParserJson;
 import org.example.reactorParser.ReactorParserXml;

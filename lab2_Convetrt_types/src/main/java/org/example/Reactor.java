@@ -1,18 +1,23 @@
 package org.example;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Reactor {
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String name;
+    @JsonProperty("class")
     private String classReactor;
-    private int burnup;
+    private double burnup;
     private double kpd;
     private double enrichment;
-    private int thermal_capacity;
-    private int electrical_capacity;
+    private double thermal_capacity;
+    private double electrical_capacity;
     private int life_time;
-    private int first_load;
+    private double first_load;
     private String source;
 
-    public Reactor(String name, String classReactor, int burnup, double kpd, double enrichment, int thermal_capacity, int electrical_capacity, int life_time, int first_load, String source) {
+    public Reactor(String name, String classReactor, double burnup, double kpd, double enrichment, double thermal_capacity, double electrical_capacity, int life_time, double first_load, String source) {
         this.name = name;
         this.classReactor = classReactor;
         this.burnup = burnup;
@@ -23,6 +28,9 @@ public class Reactor {
         this.life_time = life_time;
         this.first_load = first_load;
         this.source = source;
+    }
+
+    public Reactor() {
     }
 
     public String getName() {
@@ -41,11 +49,11 @@ public class Reactor {
         this.classReactor = classReactor;
     }
 
-    public int getBurnup() {
+    public double getBurnup() {
         return burnup;
     }
 
-    public void setBurnup(int burnup) {
+    public void setBurnup(double burnup) {
         this.burnup = burnup;
     }
 
@@ -65,19 +73,19 @@ public class Reactor {
         this.enrichment = enrichment;
     }
 
-    public int getThermal_capacity() {
+    public double getThermal_capacity() {
         return thermal_capacity;
     }
 
-    public void setThermal_capacity(int thermal_capacity) {
+    public void setThermal_capacity(double thermal_capacity) {
         this.thermal_capacity = thermal_capacity;
     }
 
-    public int getElectrical_capacity() {
+    public double getElectrical_capacity() {
         return electrical_capacity;
     }
 
-    public void setElectrical_capacity(int electrical_capacity) {
+    public void setElectrical_capacity(double electrical_capacity) {
         this.electrical_capacity = electrical_capacity;
     }
 
@@ -89,11 +97,11 @@ public class Reactor {
         this.life_time = life_time;
     }
 
-    public int getFirst_load() {
+    public double getFirst_load() {
         return first_load;
     }
 
-    public void setFirst_load(int first_load) {
+    public void setFirst_load(double first_load) {
         this.first_load = first_load;
     }
 

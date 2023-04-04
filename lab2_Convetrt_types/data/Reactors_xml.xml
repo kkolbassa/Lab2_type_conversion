@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ObjectNode>
-  <reactor>
+  <reactors>
     <MKER>
       <class>MKER</class>
       <burnup>30</burnup>
@@ -11,8 +11,8 @@
       <life_time>50</life_time>
       <first_load>192</first_load>
     </MKER>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <RBMK>
       <class>RBMK</class>
       <burnup>25</burnup>
@@ -23,8 +23,8 @@
       <life_time>40</life_time>
       <first_load>192</first_load>
     </RBMK>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <VVER_1000>
       <class>VVER-1200</class>
       <burnup>40</burnup>
@@ -35,8 +35,8 @@
       <life_time>60</life_time>
       <first_load>79.84</first_load>
     </VVER_1000>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <AP1000>
       <class>AP1000</class>
       <burnup>43.2</burnup>
@@ -47,8 +47,8 @@
       <life_time>60</life_time>
       <first_load>93.65</first_load>
     </AP1000>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <BWR>
       <class>BWR</class>
       <burnup>45</burnup>
@@ -59,8 +59,8 @@
       <life_time>60</life_time>
       <first_load>128</first_load>
     </BWR>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <ABWR>
       <class>ABWR</class>
       <burnup>46.4</burnup>
@@ -71,8 +71,8 @@
       <life_time>60</life_time>
       <first_load>128</first_load>
     </ABWR>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <EPR>
       <class>EPR</class>
       <burnup>36.1</burnup>
@@ -83,8 +83,8 @@
       <life_time>60</life_time>
       <first_load>140.66</first_load>
     </EPR>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <MAGNOX>
       <class>MAGNOX</class>
       <burnup>4.5</burnup>
@@ -95,8 +95,8 @@
       <life_time>60</life_time>
       <first_load>120</first_load>
     </MAGNOX>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <BN>
       <class>BN</class>
       <burnup>140</burnup>
@@ -107,8 +107,8 @@
       <life_time>60</life_time>
       <first_load>50.4</first_load>
     </BN>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <PWR>
       <class>PWR</class>
       <burnup>42.0</burnup>
@@ -119,8 +119,8 @@
       <life_time>50</life_time>
       <first_load>74.0</first_load>
     </PWR>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <CPR_1000>
       <class>CPR-1000</class>
       <burnup>52.0</burnup>
@@ -131,8 +131,8 @@
       <life_time>40</life_time>
       <first_load>77.0</first_load>
     </CPR_1000>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <CANDU>
       <class>CANDU</class>
       <burnup>8</burnup>
@@ -143,8 +143,8 @@
       <life_time>60</life_time>
       <first_load>38.9</first_load>
     </CANDU>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <PHWR>
       <class>PHWR</class>
       <burnup>8</burnup>
@@ -155,8 +155,8 @@
       <life_time>60</life_time>
       <first_load>38.9</first_load>
     </PHWR>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <KLT_40>
       <class>KLT-40</class>
       <burnup>42</burnup>
@@ -167,8 +167,8 @@
       <life_time>36</life_time>
       <first_load>0.007</first_load>
     </KLT_40>
-  </reactor>
-  <reactor>
+  </reactors>
+  <reactors>
     <PWR_TEST>
       <class>PWR</class>
       <burnup>40</burnup>
@@ -179,5 +179,5 @@
       <life_time>60</life_time>
       <first_load>79.84</first_load>
     </PWR_TEST>
-  </reactor>
+  </reactors>
 </ObjectNode>

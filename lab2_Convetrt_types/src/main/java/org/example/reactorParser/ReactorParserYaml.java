@@ -11,8 +11,10 @@ import java.util.Map;
 public class ReactorParserYaml implements ReactorParser {
     public ArrayList<Reactor> parse(String filePath) throws IOException {
         Yaml yaml = new Yaml();
-        ArrayList<Map<String, Object>> reactors = yaml.load(new FileInputStream(filePath));
         ArrayList<Reactor> result = new ArrayList<>();
+
+        ArrayList<Map<String, Object>> reactors = yaml.load(new FileInputStream(filePath));
+
 
         for (Map<String, Object> reactor : reactors) {
             String name = reactor.keySet().iterator().next();

@@ -20,9 +20,8 @@ public class ReactorParserXml implements ReactorParser {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(file);
-            doc.getDocumentElement().normalize();
 
-            NodeList nodeList = doc.getElementsByTagName("reactor");
+            NodeList nodeList = doc.getElementsByTagName("reactors");
 
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);

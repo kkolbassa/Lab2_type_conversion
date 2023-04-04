@@ -12,14 +12,12 @@ import java.util.ArrayList;
 
 public class ReactorParserJson implements ReactorParser {
     public ArrayList<Reactor> parse(String filePath) throws IOException {
-        // Создаем объект ObjectMapper для парсинга JSON
+
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Reactor> result = new ArrayList<>();
 
-        // Читаем JSON из файла
         JsonNode rootNode = mapper.readTree(new File(filePath));
 
-        // Обходим все узлы и заполняем объекты класса Reactor
         for (JsonNode reactorNode : rootNode) {
             String name = reactorNode.fieldNames().next();
             JsonNode reactor = reactorNode.get(name);

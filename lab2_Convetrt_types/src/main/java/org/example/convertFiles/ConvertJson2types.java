@@ -29,7 +29,7 @@ public class ConvertJson2types {
 
         // Преобразование JSON в XML
         ObjectNode xmlNode = xmlMapper.createObjectNode();
-        xmlNode.set("reactor", rootNode);
+        xmlNode.set("reactors", rootNode);
         xmlMapper.writeValue(new File("./data/Reactors_xml.xml"), xmlNode);
     }
 

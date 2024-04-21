@@ -1,14 +1,12 @@
-package org.example.dataManipulation;
-
-import org.example.reactors.Reactor;
+package org.example.reactors;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.ArrayList;
 
-public class ReactorCollection {
+public class ReactorManipulation {
     private ArrayList<Reactor> reactors ;
 
-    public ReactorCollection() {
+    public ReactorManipulation() {
         reactors = new ArrayList<>();
     }
 

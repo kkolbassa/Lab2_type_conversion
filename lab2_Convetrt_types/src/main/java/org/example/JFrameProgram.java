@@ -5,7 +5,8 @@
  */
 package org.example;
 
-import org.example.dataManipulation.DataManipulation;
+import org.example.reactors.ReactorManipulation;
+import org.example.parserManipulatiom.ParserManipulation;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,11 +20,12 @@ import javax.swing.tree.DefaultTreeModel;
  */
 public class JFrameProgram extends javax.swing.JFrame {
 
-    public static DataManipulation dm = new DataManipulation();
-    public JFrameProgram() throws IOException {
+    public static ParserManipulation pm = new ParserManipulation();
+    public static ReactorManipulation rm = new ReactorManipulation();
+    public JFrameProgram() {
         initComponents();
         try {
-            dm.createFiles();
+            pm.createFiles();
         }catch (Exception e){
             JOptionPane.showMessageDialog (null, "Ошибка добавления файлов с расширениями", "Oшибка", JOptionPane.ERROR_MESSAGE);
         }
@@ -94,14 +96,18 @@ public class JFrameProgram extends javax.swing.JFrame {
 
     private void jButtonOpenJFileChooserActionPerformed(java.awt.event.ActionEvent evt) throws IOException {//GEN-FIRST:event_jButtonOpenJFileChooserActionPerformed
 
-    JFileChooser chooser = new JFileChooser(); 
+    JFileChooser chooser = new JFileChooser();
+    String currentDir = System.getProperty("user.dir");
+    chooser.setCurrentDirectory(new File(currentDir));
     chooser.setDialogTitle("Выберите файл");
+
     if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
         jTreeReactors.setModel(new DefaultTreeModel(new DefaultMutableTreeNode("Реакторы")));
        try {
            File file = chooser.getSelectedFile();
-           dm.importData(String.valueOf(file));
-           jTreeReactors.setModel(new DefaultTreeModel(dm.addInfo2GUI()));
+           rm.setReactors(pm.importData(String.valueOf(file)));
+           if(rm.getReactors().isEmpty()) throw new Exception();
+           jTreeReactors.setModel(new DefaultTreeModel(rm.addInfo2GUI()));
        }catch (Exception r){
            JOptionPane.showMessageDialog (null, "Ошибка чтения файла", "Oшибка", JOptionPane.ERROR_MESSAGE);
        }
